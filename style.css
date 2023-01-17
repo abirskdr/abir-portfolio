@@ -1,0 +1,1564 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  background-color: #111;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 300px;
+}
+
+nav {
+  padding: 10px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 140px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+}
+
+nav ul li a {
+  color: #707070;
+  text-decoration: none;
+  font-size: 25px;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: #b92814;
+  transition: 1200ms;
+}
+
+nav .fa-solid {
+  color: #707070;
+  display: none;
+}
+
+.header-text {
+  padding: 10px 7%;
+  color: #707070;
+  margin-top: 300px;
+  font-size: 25px;
+}
+
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+.header-text h1 span {
+  color: #b92814;
+}
+
+.resumebtn {
+  padding: 12px 2vw;
+  font-size: 18px;
+  line-height: 100px;
+  margin-left: 7vw;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #111;
+  cursor: pointer;
+  background-color: #b92814;
+  position: sticky;
+  border: none;
+}
+
+.resumebtn:active {
+  background-color: #62160c;
+  transform: translateY(4px);
+}
+
+.resumebtn2 {
+  z-index: 10;
+  border-radius: 60px;
+  cursor: pointer;
+  background-color: #b92814;
+  position: fixed;
+  bottom: 45px;
+  text-decoration: none;
+  color: #111;
+  right: 20px;
+  font-size: 28px;
+  padding: 20px 20px;
+  border: none;
+}
+
+.resumebtn2:active {
+  background-color: #62160c;
+  transform: translateY(4px);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.resumebtn2 {
+  font-size: 23px;
+  height: 63px;
+  display: inline-flex;
+  padding-left: 2px;
+  align-items: center;
+  overflow: hidden;
+  width: auto;
+  max-width: 32px; /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
+  -webkit-transition: max-width 0.5s;
+  transition: max-width 0.5s;
+}
+
+.resumebtn2:hover {
+  max-width: 300px;
+}
+
+.icon {
+  font-size: 16px;
+  margin-right: 15px;
+  padding: 0px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  white-space: nowrap;
+  padding-right: 15px;
+}
+
+.about {
+  padding: 80px 15px;
+  color: #707070;
+}
+
+.aboutTitle {
+  font-size: 70px;
+  color: #707070;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.about-me-text {
+  font-size: 20px;
+  color: #707070;
+  text-align: justify;
+  line-height: 30px;
+  margin-right: 70px;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+
+.about-col-1 img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2 {
+  width: 100%;
+  flex-basis: 60%;
+}
+
+.tab {
+  width: 100%;
+}
+
+.tab-titles {
+  width: 100%;
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: #b92814;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 1s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #b92814;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+.skills {
+  padding: 0px 10vw;
+  height: 110vw;
+}
+
+.skillsTitle {
+  font-size: 70px;
+  color: #707070;
+}
+
+.skillBox {
+  display: flex;
+  flex-direction: row;
+  height: 60vw;
+}
+
+.skillBox div {
+  width: 100%;
+  height: 80%;
+}
+
+.skillBox div ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skillBox div ul li {
+  background-color: #707070;
+  margin-bottom: 10%;
+  padding: 10%;
+  width: 90%;
+  height: 20%vw;
+  list-style: none;
+  border-radius: 50px;
+}
+
+.skillBox div ul li img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0px 100px;
+}
+
+.projectsTitle {
+  font-size: 75px;
+  color: #707070;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.phone {
+  flex: 1;
+  width: 300px;
+  height: 600px;
+  position: relative;
+}
+
+.phoneScreen {
+  width: 264px;
+  height: 567px;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  border-radius: 28px;
+  overflow: scroll;
+}
+
+.phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.phoneApp {
+  width: 100%;
+}
+
+.projectDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.projectTitle {
+  font-size: 70px;
+  color: #707070;
+}
+
+.projectDesc {
+  font-size: 20px;
+  color: #707070;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.projectButton {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #707070;
+  color: #707070;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectButton::after {
+  content: 'Deployed  Project';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b92814;
+  color: #222;
+}
+
+.projectButton:hover.projectButton::after {
+  transform: translateX(100%);
+}
+
+.laptop {
+  width: 600px;
+  height: 379px;
+  flex: 1;
+  position: relative;
+}
+
+.laptopScreen {
+  width: 451px;
+  height: 283px;
+  position: absolute;
+  top: 18px;
+  left: 68px;
+  overflow: scroll;
+}
+
+.laptopApp {
+  width: 100%;
+}
+
+.laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.contact {
+  padding: 0px 6vw;
+  padding-top: 35px;
+  height: 800px;
+}
+
+.contactTitle {
+  font-size: 75px;
+  color: #707070;
+}
+
+.contact-col {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  color: #707070;
+}
+
+.contact-left {
+  margin-top: 60px;
+  margin-right: 12vw;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #b92814;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 35px;
+  color: #707070;
+  transition: 0.75s;
+}
+
+.contact-icons a {
+  text-decoration: none;
+  color: #707070;
+}
+
+.contact-icons a:hover {
+  color: #b92814;
+}
+
+.contact-icons p:hover {
+  transform: translateY(-5px);
+  transition: 0.75s;
+}
+
+.username {
+  font-size: 20px;
+}
+
+.social-icons a:hover {
+  color: #b92814;
+  transform: translateY(-5px);
+  transition: 0.75s;
+}
+
+.leetcode-icon {
+  font-size: 25px !important;
+}
+
+.contact-right {
+  margin-top: 80px;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+.sub-title {
+  font-size: 50px;
+  font-weight: 400;
+  color: #707070;
+}
+
+form input,
+form textArea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #aeaeae;
+  padding: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #111;
+  border-radius: 6px;
+}
+
+.msgBox {
+  display: flex;
+  flex-direction: row;
+}
+
+form .btn {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #b92814;
+  border: none;
+}
+
+form .btn:active {
+  background-color: #62160c;
+  transform: translateY(4px);
+}
+
+.msg {
+  font-size: 25px;
+  margin-top: 40px;
+  margin-left: 60px;
+  width: 40vw;
+  height: 30px;
+}
+
+.footer {
+  width: 100%;
+  opacity: 0.5;
+  background-color: #2d2c2c;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  color: #b92814;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footerNavigate {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footerlink {
+  text-decoration: none;
+  margin-right: 20px;
+  color: #b92814;
+}
+
+.footerlinkLast {
+  text-decoration: none;
+  color: #b92814;
+}
+
+/* -------------smaller screen--------------- */
+
+@media screen and (max-width: 1400px) {
+  .resumebtn2 {
+    font-size: 20px;
+    height: 55px;
+    display: inline-flex;
+    padding-left: 2px;
+    align-items: center;
+    overflow: hidden;
+    width: auto;
+    max-width: 32px; /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
+    -webkit-transition: max-width 0.5s;
+    transition: max-width 0.5s;
+  }
+
+  .resumebtn2:hover {
+    max-width: 300px;
+  }
+
+  .skillsTitle {
+    font-size: 50px;
+    color: #707070;
+  }
+
+  .projectDetail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .projectsTitle {
+    font-size: 60px;
+    color: #707070;
+  }
+
+  .projectTitle {
+    font-size: 60px;
+    color: #707070;
+  }
+
+  .projectDesc {
+    font-size: 19px;
+    color: #707070;
+    text-align: justify;
+    line-height: 28px;
+  }
+
+  .project {
+    gap: 45px;
+  }
+
+  .contactTitle {
+    font-size: 60px;
+    color: #707070;
+  }
+
+  .sub-title {
+    font-size: 47px;
+  }
+
+  .msg {
+    font-size: 21px;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 40vw;
+    height: 30px;
+  }
+
+  .contact {
+    padding: 0px 6vw;
+    padding-top: 35px;
+    height: 1000px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 100px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 15px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 22px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 22px;
+  }
+
+  .leetcode-icon {
+    font-size: 22px !important;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .resumebtn2 {
+    font-size: 18px;
+    height: 52px;
+  }
+
+  .resumebtn2:hover {
+    max-width: 300px;
+  }
+
+  .projectTitle {
+    font-size: 55px;
+    color: #707070;
+  }
+
+  .projectDesc {
+    font-size: 18px;
+    color: #707070;
+    text-align: justify;
+    line-height: 25px;
+  }
+
+  .project {
+    gap: 40px;
+  }
+
+  .contactTitle {
+    font-size: 55px;
+    color: #707070;
+  }
+
+  .sub-title {
+    font-size: 45px;
+  }
+
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1000px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 22px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 22px;
+  }
+
+  .leetcode-icon {
+    font-size: 22px !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutTitle {
+    font-size: 50px;
+    color: #707070;
+  }
+
+  .about-me-text {
+    font-size: 18px;
+    color: #707070;
+    text-align: justify;
+    line-height: 25px;
+    margin-right: 45px;
+  }
+
+  .skillsTitle {
+    font-size: 40px;
+    color: #707070;
+  }
+
+  .projectDetail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .projectsTitle {
+    font-size: 55px;
+    color: #707070;
+  }
+
+  .projectTitle {
+    font-size: 53px;
+    color: #707070;
+  }
+
+  .projectDesc {
+    font-size: 18px;
+    color: #707070;
+    text-align: justify;
+    line-height: 25px;
+  }
+
+  .projects {
+    padding: 0 25px;
+    text-align: center;
+  }
+
+  .project {
+    gap: 25px;
+    margin-bottom: 200px;
+  }
+
+  .project {
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+
+  .phone,
+  .laptop {
+    transform: none !important;
+  }
+
+  .contactTitle {
+    font-size: 50px;
+    color: #707070;
+  }
+
+  .sub-title {
+    font-size: 45px;
+  }
+
+  .msg {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 40vw;
+    height: 30px;
+  }
+
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1000px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .leetcode-icon {
+    font-size: 17px !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1200px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .leetcode-icon {
+    font-size: 17px !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .logo {
+    width: 100px;
+  }
+
+  .header {
+    background-image: url('./img/phone-background.png');
+  }
+
+  .header-text {
+    margin-top: 470px;
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+
+  nav .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+
+  nav ul {
+    background: #b92814;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+
+  nav ul li a {
+    color: rgb(0, 0, 0) !important;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    color: rgb(0, 0, 0) !important;
+  }
+
+  .resumebtn2 {
+    font-size: 16px;
+    height: 50px;
+  }
+
+  .resumebtn2:hover {
+    max-width: 300px;
+  }
+
+  .aboutTitle {
+    font-size: 30px;
+    color: #707070;
+  }
+
+  .about-me-text {
+    margin-right: 0px;
+  }
+
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+
+  .tab-links {
+    margin-right: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .skillsTitle {
+    font-size: 30px;
+    color: #707070;
+  }
+
+  .projectsTitle {
+    font-size: 35px;
+    color: #707070;
+  }
+
+  .projectTitle {
+    font-size: 50px;
+    color: #707070;
+  }
+
+  .projectDesc {
+    font-size: 15px;
+    color: #707070;
+    text-align: justify;
+    line-height: 20px;
+  }
+
+  .project {
+    gap: 30px;
+  }
+
+  .contactTitle {
+    font-size: 50px;
+    color: #707070;
+  }
+
+  .sub-title {
+    font-size: 40px;
+  }
+
+  .msg {
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 40vw;
+    height: 30px;
+  }
+
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1200px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .leetcode-icon {
+    font-size: 17px !important;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .resumebtn2 {
+    font-size: 14px;
+    height: 45px;
+  }
+
+  .resumebtn2:hover {
+    max-width: 300px;
+  }
+
+  .msg {
+    font-size: 12px;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 40vw;
+    height: 30px;
+  }
+
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1200px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .leetcode-icon {
+    font-size: 17px !important;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .skills {
+    padding: 0px 10vw;
+    height: 150vw;
+  }
+
+  .resumebtn2 {
+    font-size: 12px;
+    height: 43px;
+    display: inline-flex;
+    padding-left: 2px;
+    align-items: center;
+    overflow: hidden;
+    width: auto;
+    max-width: 32px; /** I'm animating max-width because width needs to be auto, and auto can't be animated **/
+    -webkit-transition: max-width 0.5s;
+    transition: max-width 0.5s;
+  }
+
+  .skillsTitle {
+    font-size: 25px;
+    color: #707070;
+  }
+
+  .projectsTitle {
+    font-size: 30px;
+    color: #707070;
+  }
+
+  .contactTitle {
+    font-size: 45px;
+    color: #707070;
+  }
+
+  form input,
+  form textArea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #aeaeae;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #111;
+    border-radius: 6px;
+  }
+
+  form .btn {
+    font-size: 12px;
+    padding: 4px 30px;
+    margin-top: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #b92814;
+    border: none;
+  }
+
+  .msg {
+    font-size: 10px;
+    margin-top: 40px;
+    margin-left: 60px;
+    width: 40vw;
+    height: 30px;
+  }
+
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1000px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .leetcode-icon {
+    font-size: 17px !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .logo {
+    width: 70px;
+  }
+
+  .header-text {
+    margin-top: 400px;
+    font-size: 16px;
+  }
+
+  .header-text h1 {
+    margin-top: 10px;
+  }
+
+  nav ul {
+    background: #b92814;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 150px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.75s;
+  }
+
+  nav ul li {
+    margin: 12px;
+  }
+
+  nav ul li a {
+    color: rgb(0, 0, 0) !important;
+    font-size: 20px;
+  }
+
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    color: rgb(0, 0, 0) !important;
+    font-size: 20px;
+  }
+
+  .resumebtn {
+    padding: 8px 1vw;
+    font-size: 12px;
+    line-height: 50px;
+  }
+
+  .skillsTitle {
+    font-size: 20px;
+    color: #707070;
+  }
+
+  .projectsTitle {
+    font-size: 25px;
+    color: #707070;
+  }
+
+  .project {
+    gap: 25px;
+  }
+
+  .contactTitle {
+    font-size: 40px;
+    color: #707070;
+  }
+
+  .sub-title {
+    font-size: 35px;
+  }
+
+  form input,
+  form textArea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #aeaeae;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #111;
+    border-radius: 6px;
+  }
+
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1000px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .leetcode-icon {
+    font-size: 17px !important;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .skills {
+    padding: 0px 10vw;
+    height: 180vw;
+  }
+
+  .about {
+    padding: 80px 10px;
+    color: #707070;
+  }
+
+  .about-me-text {
+    font-size: 15px;
+    color: #707070;
+    text-align: justify;
+    line-height: 20px;
+  }
+
+  .tab-contents ul li {
+    list-style: none;
+    font-size: 13px;
+    margin: 10px 0;
+  }
+
+  .skillsTitle {
+    font-size: 16px;
+    color: #707070;
+  }
+
+  .projectsTitle {
+    font-size: 20px;
+    color: #707070;
+  }
+
+  .project {
+    gap: 50px;
+  }
+
+  .contactTitle {
+    font-size: 35px;
+    color: #707070;
+  }
+
+  .sub-title {
+    font-size: 30px;
+  }
+
+  form input,
+  form textArea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #aeaeae;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #111;
+    border-radius: 6px;
+  }
+
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1000px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .leetcode-icon {
+    font-size: 17px !important;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  form input,
+  form textArea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #aeaeae;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #111;
+    border-radius: 6px;
+  }
+
+  .contact {
+    padding: 0px 3.5vw;
+    padding-top: 35px;
+    height: 1000px;
+  }
+
+  .contact-left {
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+
+  .contact-left p {
+    margin-top: 25px;
+  }
+
+  .contact-left p i {
+    color: #b92814;
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 30px;
+    color: #707070;
+    transition: 0.75s;
+  }
+
+  .username {
+    font-size: 17px;
+  }
+
+  .leetcode-icon {
+    font-size: 17px !important;
+  }
+}
